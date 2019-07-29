@@ -75,3 +75,7 @@ RUN mkdir -p /usr/share/man/man1 /usr/share/man/man7 \
   && apt-get -y autoclean \
   && apt-get -y autoremove \
   && rm -rf /var/lib/apt/lists/* && rm -rf && rm -rf /var/lib/cache/* && rm -rf /var/lib/log/* && rm -rf /tmp/*
+
+# mhsendmail
+RUN curl -Lo /usr/local/bin/mhsendmail https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64 && \
+  chmod +x /usr/local/bin/mhsendmail
